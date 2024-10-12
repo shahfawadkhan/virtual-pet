@@ -34,3 +34,26 @@ let pet = {
 };
 
 
+while (true) {
+    let action = prompt(`What would you like to do with ${pet.name}?\n1: Feed\n2: Play\n3: Age Pet\n4: Get Info\n5: Exit`);
+
+    switch (action) {
+        case "1":
+            pet.feed();
+            break;
+        case "2":
+            pet.play();
+            break;
+        case "3":
+            pet.agePet();
+            break;
+        case "4":
+            pet.getInfo();
+            break;
+        case "5":
+            alert("Thanks for playing!");
+            throw new Error("Game ended by user");
+        default:
+            alert("Invalid choice. Please try again.");
+    }
+}
