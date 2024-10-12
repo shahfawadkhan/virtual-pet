@@ -1,36 +1,36 @@
-var pet  = {
-    name : 'abc' , 
-    type : 'cat' ,
-    age : 9,
-    happiness : 50 ,
-    hunger : 60 ,
-    feed : function(){
-        if(this.hunger >= 20){
-            this.happiness = this.happiness-20;
-            console.log(this.happiness)
-        }
-    },
-    play : function(){
-        if(this.happiness>=0 && this.happiness<=100){
-            this.happiness+=20;
-            console.log(this.happiness)
-        }
-    },
-    agePet : function(){
-        this.age+=1;
-        this.happiness = this.happiness-5;
-        this.hunger+=10;
 
-        // console.log(this.age)
-        // console.log(this.happiness)
-        // console.log(this.hunger)
+let pet = {
+    name: prompt("What's your pet's name?"),
+    type: prompt("What type of pet is it? (e.g., dog, cat, dragon)"),
+    age: 0,
+    happiness: 50,
+    hunger: 50,
 
+    
+    feed : function() {
+        if(this.hunger >=0)
+        this.hunger = this.hunger - 20;
+        alert(`You fed ${this.name}. Hunger is now ${this.hunger}.`);
     },
-    getInfo : function(){
-        console.log(`Pet Name is ${this.name} Type is ${this.type} age is ${this.age} , happiness ${this.happiness} hunger ${this.hunger}`)
+
+   
+    play : function() {
+        if(this.happiness < 100)
+        this.happiness =  this.happiness + 20;
+        alert(`You played with ${this.name}. Happiness is now ${this.happiness}.`);
+    },
+
+
+    agePet : function() {
+        this.age++;
+        this.happiness = this.happiness - 5;
+        this.hunger = 100, this.hunger + 10;
+        alert(`${this.name} is now ${this.age} years old. Happiness: ${this.happiness}, Hunger: ${this.hunger}`);
+    },
+
+    getInfo : function() {
+        alert(`Name: ${this.name}\nType: ${this.type}\nAge: ${this.age}\nHappiness: ${this.happiness}\nHunger: ${this.hunger}`);
     }
-}
-
-
+};
 
 
