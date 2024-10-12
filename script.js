@@ -52,7 +52,6 @@ while (true) {
             break;
         case "5":
             alert("Thanks for playing!");
-            throw new Error("Game ended by user");
         default:
             alert("Invalid choice. Please try again.");
     }
